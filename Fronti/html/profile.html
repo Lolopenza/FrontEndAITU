@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Profile</title>
+
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+      <header>
+        
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar" href="#">
+              <img src="/images/newlogo.png" class="logo-main">
+              <img src="/images/link.png" class="logo-main">
+              <img src="/images/sphere.png" class="logo-main">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto  mb-2 mb-lg-0 navbar-text-section" >
+                <li class="nav-item">
+                  <a class="nav-link header-text-buttons" aria-current="page" href="#">SHOP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link header-text-buttons" onclick="openForm()" href="#">CART</a>
+                </li>
+                <li class="nav-item"></li>
+                  <a class="nav-link header-text-buttons" href="#">PROFILE</a>
+                </li>
+              </ul>
+              <form class="d-flex search-custom-made" role="search">
+                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success header-search-cusbutton" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div id="overlay" class="overlay"></div>
+
+        <div class="form-popup-cart" id="myForm">
+          <form action="/action_page.php" class="form-container-cart">
+            <div class="popup-header">
+              CART
+            </div>
+            <div class="popup-text"><b>
+              Free shipping on orders over $29 & free returns
+            </b>
+            </div>
+            <hr>
+            <div class="popup-text2">
+              Your cart is currently empty. Begin shopping now
+            </div>
+            <button type="button" class="btn-cart-cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+  
+      <script>
+          function openForm() {
+          document.getElementById("myForm").style.display = "block";
+          document.getElementById("overlay").style.display = "block";
+          }
+
+
+          function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+          document.getElementById("overlay").style.display = "none";
+          }
+
+          document.getElementById('overlay').addEventListener('click', function () {
+              closeForm();
+          });
+      </script>
+
+      </header>
+      
+      <main>
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="col"></div>
+            <div class="col-6 acclogin">
+              <h1 class="centered-text">My account</h1>
+            </div>
+            <div class="col"></div>
+          </div>
+        </div>
+        <br>
+        <div class="button-container">
+          <div class="button-group">
+            <a href="#" class="square_btn2">LOGIN</a>
+            <a href="#" class="square_btn1">SIGN IN</a><br>
+          </div>
+        </div>
+        
+
+
+        <!-- <div class="card" style="width: 18rem;">
+          <img src="/images/acccart.png", class="pic">
+          <div class="card-body">
+            <p class="card-title"><b>ACCOUNT</b></p>
+            <p class="section-text">Track or modify orders, make a return and manage your account.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">PROFILE</li>
+            <li class="list-group-item">MY ORDERS</li>
+            <li class="list-group-item">PAYMENT OPTIONS</li>
+            <li class="list-group-item">PRIVACY + DATA</li>
+          </ul>
+        </div> -->
+
+
+
+        <div class="container text-center">
+          <div class="row  rowofimages">
+            <div class="col">
+              <img src="/images/acccart.png", class="pic">
+              <p class="section-header"><b>ACCOUNT</b></p>
+              <p class="section-text">Track or modify orders, make a return and manage your account.</p><br>
+              
+              <p class="lists"><b>PROFILE</b></p>
+              <p class="lists"><b>MY ORDERS</b></p>
+              <p class="lists"><b>PAYMENT OPTIONS</b></p>
+              <p class="lists"><b>PRIVACY + DATA</b></p>
+            </div>
+            <div class="col">
+              <img src="/images/getstart.png", class="pic">
+              <p class="section-header"><b>EMAIL</b></p>
+              <p class="section-text">Stay up to date with LinkSphere through our newsletter subscription.</p><br>
+
+              <p class="lists"><b>EMAIL PREFERENCES</b></p>
+            </div>
+            <div class="col">
+              <img src="/images/support.png", class="pic">
+              <p class="section-header"><b>SUPPORT</b></p>
+              <p class="section-text">Have questions about your product? We've got answers.</p><br>
+
+              <p class="lists"><b>GET SUPPORT</b></p>
+              <p class="lists"><b>ORDER FAQS</b></p>
+            </div>
+            <div class="col">
+              <img src="/images/services.png", class="pic">
+              <p class="section-header"><b>SERVICES</b></p>
+              <p class="section-text">Manage all of your subscriptions with ease.</p><br>
+
+              <p class="lists"><b>ALL SERVICES</b></p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="container text-center footer-fo">
+            <div class="row">
+             
+              <div class="col">
+                <h3 class="footer-bigtext">About</h3>
+                <p class="footer-text">LinkSphere story</p>
+                <p class="footer-text">Blog</p>
+                <p class="footer-text">Contact us</p>
+              </div>
+              <div class="col">
+                <h3 class="footer-bigtext">Customers</h3>
+                <p class="footer-text">Return policy</p>
+                <p class="footer-text">Student discount</p>
+              </div>
+              <div class="col">
+                <h3 class="footer-bigtext">Partners</h3>
+                <p class="footer-text">Investors</p>
+              </div>
+  
+            </div> 
+          </div>
+          
+        </footer>
+
+      </main>
+
+
+
+    <script src="/bootstrap.bundle.js"></script>
+  </body>
+</html>
